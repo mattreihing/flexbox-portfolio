@@ -15,7 +15,7 @@
 
 /* class to add extra padding to the top of each article */
 .article-padding {
-	padding:20px 0px 0px 0px;
+	padding:15px 0px 0px 0px;
 }
 
 /* class to add extra padding to the bottom of each paragraph */
@@ -82,7 +82,18 @@ header h3 {
 }
 
 /* navigation links "intro", "about me", "contact" */
-nav div a {
+
+
+header {
+		justify-content: space-between;
+		padding: 0 30px;
+	}
+
+header nav {
+		margin-top: 20px;
+	}
+
+header nav div a {
 	background-color:#4B5963;
 	color:#F3F6F6;
 	text-transform:lowercase;
@@ -124,67 +135,137 @@ hr {
 	background-color:#97B1AE;
 }
 
+p {
+	margin: 10px;
+}
+
+ul {
+	padding: 0;
+	margin: 0 0 0 15px;
+
+}
+
+li {
+	overflow-wrap: normal;
+}
+
+form label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+form input[type=text] {
+	margin-bottom: 10px;
+}
+
+form input[type=radio] + label {
+	display: inline;
+}
+
+form input[type=radio] {
+	margin-bottom: 10px;
+}
+
+form textarea {
+	height: 4rem;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+form button { 
+	padding: 10px;
+}
+
 footer {
 	background-color:#334B48;
 }
 
-/* ------------------------------------------------------ */
 /* Flexbox Classes */
 
-.group-centered {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+#wrapper {
+	max-width: 500px;
+	margin: auto;
 }
 
-.group {
+.nav-container {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-direction: row;
+	flex: 1;
+	flex-wrap: wrap;
+	justify-content: center;
+	/*border: solid blue;*/
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	flex-wrap: wrap;
+	/*border: solid red;*/
 }
 
 .item {
-	margin: 10px;
-	flex:1;
+	display:flex;
+	flex:1;	
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	/*border: solid orange;*/
 }
 
-.item-right {
-	margin: 10px;
+.item-list {
+	display: flex;
 	flex: 1;
-	text-align: right;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: flex-start;
+	/*border: dotted blue;*/
 }
 
-.item-center{
-	margin: 10px;
-	flex: 1;
+.center {
+	align-items: center;
+	align-content: center;
 	text-align: center;
 }
 
-/* Media Query */
-
-@media all and (min-width: 800px) {
-	.wrapper {
-		width: 100%;
-		margin: auto;
-	}
-
-	.group {
-		flex-direction: row;
-	}
-
-	.group-centered {
-		flex-direction: row;
-	}
-
+.left {
+	display: flex;
+	flex: 1;
+	justify-content: flex-start;
+	align-items: center;
+	/*border: dotted white;*/
 }
 
+.right {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	align-items: center;
+	/*border: dotted white;*/
+}
 
+.start {
+	justify-content: center;
+	align-items: flex-start;
+}
 
+@media all and (max-width: 800px) {
 
+	.nav-container {
+		flex-direction: column;
+	}
 
+	.item {
+		display: flex;
+		flex-direction: column;
+	}
 
-
-
-
-
-
+	.item-list {
+		display: flex;
+		flex: 1;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-content: flex-start;
+	}
+}
