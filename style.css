@@ -24,7 +24,7 @@
 }
 
 /* all headings from 1-4, paragraphs, and list elements*/
-nav, h1, h2, h3, p, ol, ul, a {
+nav, h1, h2, h3, p, ol, ul, li, input, label, textarea, a {
 	font-family:'Helvetica Neue', Helvetica, sans-serif;
 }
 
@@ -92,6 +92,8 @@ header {
 header nav {
 		margin-top: 20px;
 	}
+
+/* Buttons below should have the same length. In future iterations, will have to create a button class */
 
 header nav div a {
 	background-color:#4B5963;
@@ -185,6 +187,18 @@ footer {
 #wrapper {
 	max-width: 500px;
 	margin: auto;
+}
+
+#single-line-li {
+	margin: 3px;
+	padding-right: 5px;
+	text-align: center;
+	font-family: 
+}
+
+#margin-zero {
+	margin: 0;
+	padding: 0;
 }
 
 .nav-container {
